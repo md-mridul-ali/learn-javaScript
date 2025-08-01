@@ -17,21 +17,25 @@ Find all the even numbers from 78 to 98.
 //check odd number
 let startNumber=61;
 let lastNumber=100;
-for(let i=startNumber; i<=lastNumber; i++)
+let i=startNumber;
+while(i<=lastNumber)
 {
     if(i%2 !== 0)
     {
         console.log(i, "is odd number");
     }
+     i++;
 }
 console.log("**************************")
 //check even number
 let startNum=78;
 let lastNum=98;
-for(let j=startNumber; j<=lastNumber; j++)
+let j=startNum;
+while(j<=lastNum)
 {
     if(j%2 == 0)
     {
         console.log(j, "is even number");
     }
+    j++;
 }
