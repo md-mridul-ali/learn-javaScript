@@ -1,6 +1,6 @@
 /** Problem -03 ( Medicine Planner ) */ 
 var lastDay = 6 ; 
-    for(let i=1; i<=lastDay; i++)
+    for(var i=1; i<=lastDay; i++)
     {
         if(i % 3 === 0)
         {
