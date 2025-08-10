@@ -6,7 +6,7 @@ function leapYear(year)
     {
         return true;
     }
-    else if(year % 400 === 0)
+    else if( year % 100 ===0 && year % 400 === 0)
     {
         return true;
     }
@@ -15,6 +15,6 @@ function leapYear(year)
          return false;
     }
 }
-const year= 1952;
+const year= 1900;
 const isLeapYear=leapYear(year);
 console.log("Is ",year," is leap-year?",isLeapYear);
