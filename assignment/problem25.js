@@ -7,6 +7,14 @@ function  resultReport( marks )
             let count=0;
             let passCount=0;
             let failCount=0;
+            if(marks.length === 0)
+            {
+                return{
+                    finalScore:0,
+                    pass:0,
+                    fail:0
+                };
+            }
             for(let i=0; i<marks.length; i++)
             {
                 totalMarks=totalMarks+marks[i];
@@ -32,6 +40,6 @@ function  resultReport( marks )
         return 'Invalid';
      }
 }
-const marks=100;
+const marks=[98, 87, 67, 91, 92, 33, 87] ;
 const result=resultReport(marks);
 console.log(result);
