@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Of Dom</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <style>
+        #foods-title{
+             color:blue;
+             /* background-color: lightcoral; */
+         }
+         .food .foreign{
+            font-weight: 800;
+         }
+         .bg-red{
+            background-color: red;
+         }
+         .bold{
+            font-weight: 700;
+         }
+         .big{
+            font-size: 3em;
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>This is my header no banner</h1>
+    </header>
+    <main id="main-container">
+        <section id="old-dhaka" class="songs">
+            <p>Lorem ipsum dolor sit <span>Oi Mama Na Please!!</span> amet consectetur adipisicing elit. Aperiam quia tempore eos cum consequatur voluptate soluta repellendus ipsa assumenda sunt!</p>
+            <h1>Dowra NCP Awami-league Ailo<span> Vag NCP Vag.....</span></h1>
+            <h1>Welcome-to-my DOM</h1>
+            <ul>
+            <li>Shafayet</li>
+            <li class="foreign">Bonobash</li>
+            <li id="band">Jalali</li>
+            <li>Dom de re baba</li>
+            </ul>
+        </section>
+        <section class="food">
+            <h1 id="foods-title">Foods I love</h1>
+            <ul>
+                <li>Rice</li>
+                <li>Potato</li>
+                <li>Fish</li>
+                <li>Lentils</li>
+                <li class="foreign">Pizza</li>
+                <li class="foreign">Pasta</li>
+                <li class="foreign">Burger</li>
+            </ul>
+        </section>
+
+        <section id="players-container">
+            <h1>Players</h1>
+            <ul id="player-list">
+                <li>Shakib</li>
+                <li>Mashrafi</li>
+                <li>Litton</li>
+                <li>Mustafijur</li>
+                <li>Chele</li>
+            </ul>
+        </section>
+    </main>
+    <script>
+        // console.log("Hello from javaScript");
+        // console.log("Hello bole cole gelo")
+
+       const liCollection= document.getElementsByTagName('li');
+       console.log(liCollection);
+       for(const li of liCollection)
+       {
+        //    console.log(li.innerText);//li er moddhe jey likha ache shudhu oigulo dekhabe
+       }
+
+       //all h1
+       const allHeading=document.getElementsByTagName('h1');
+       for(const heading of allHeading)
+       {
+        //   console.log(heading.innerText);
+       }
+       //find by id
+       const foodTitle=document.getElementById('foods-title');
+    //    console.log(foodTitle.innerText);
+       foodTitle.innerText='Food make me happy'//'foods title' will change by 'Food make me happy. we can change the element content by 'innerText' 
+
+       const bandElement=document.getElementById('band');
+       bandElement.innerText='Jalali Sleeping Band';//Jalali change by 'Jalali Sleeping Band'
+
+       //find by class
+       const foreignElements=document.getElementsByClassName('foreign');
+       for(const foreignElement of foreignElements)
+       {
+        //   console.log(foreignElement.innerText);
+       }
+
+       //querySelectorAll()
+       const spanElement=document.querySelectorAll('#old-dhaka span');
+       for(const span of spanElement)
+       {
+        //   console.log(span.innerText);
+       }
+       //querySelector()
+        const element=document.querySelector('#old-dhaka span');
+        // console.log(element);
+
+
+        // foodTitle.style.color='blue';
+        // foodTitle.style.backgroundColor='lightgreen';
+        // foodTitle.style.padding='10px'
+        // foodTitle.style.marginLeft='10px'
+        // foodTitle.style.textAlign='center'
+        foodTitle.classList.add('big');
+        foodTitle.classList.add('bg-red');
+        foodTitle.classList.remove('bg-red');
+        foodTitle.getAttribute('id');//food-title er moddhe id thakle dekhte pabo
+        foodTitle.getAttribute('class');
+        //set attribute
+        foodTitle.setAttribute('title', 'Title od tooltip by js')
+        
+
+        // document.getElementById('players-container').innerHTML;
+    </script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/cssInJs.js"></script>
+    <script src="./scripts/child.js"></script>
+    <script src="./scripts/append.js"></script>
+</body>
+</html>
