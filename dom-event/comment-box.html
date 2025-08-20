@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+    <style>
+        .comment{
+            border: 2px solid blue;
+            background-color: lightcyan;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Awesome Comment Box. Write what in your mind!</h1>
+    <section>
+        <h3>All Comments Here</h3>
+        <div id="comment-container">
+            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, temporibus.</p>
+            <p class="comment">Quia est quam beatae earum ad fuga dolorem eveniet dolor!</p>
+            <p class="comment">Nam eaque voluptatum vitae possimus doloribus est placeat cum sed?</p>
+        </div>
+        <!-- <form action=""> -->
+            <textarea name="" id="text-area" cols="60" rows="5"></textarea><br>
+            <button id="btn-post-comment">Post Comment</button>
+        <!-- </form> -->
+    </section>
+
+    <script>
+        // 
+        document.getElementById('btn-post-comment')
+        .addEventListener('click', function(){
+            // step-2: get the text written on the comment text area
+            const commentTextBox=document.getElementById('text-area');
+            const newComment=commentTextBox.value;
+
+
+            // step-3: get the parent node where the publish comment
+            const commentContainer=document.getElementById('comment-container');
+            console.log(commentContainer);
+
+            // step-4: create a comment paragraph and set the inner text
+            const commentElement=document.createElement('p');
+            commentElement.classList.add('comment')
+            commentElement.innerText=newComment;
+
+            // step-5 append the new p tag to the parent node
+            commentContainer.appendChild(commentElement);
+
+            // step-6: clean the text area
+            commentTextBox.value='';
+        })
+    </script>
+</body>
+</html>
