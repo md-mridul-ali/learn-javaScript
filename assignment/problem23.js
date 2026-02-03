@@ -24,6 +24,6 @@ function  bestTeam( player1, player2 )
      }
 }
 const player1={ name: "Germany", foul: 10, cardY: 1, cardR: 1 };
-const player2={ name: "France", foul: 10, cardY: 2, cardR: 1 } ;
+const player2="France";
 const result=bestTeam(player1,player2);
 console.log(result);

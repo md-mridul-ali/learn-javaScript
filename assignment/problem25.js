@@ -40,6 +40,6 @@ function  resultReport( marks )
         return 'Invalid';
      }
 }
-const marks=[98, 87, 67, 91, 92, 33, 87] ;
+const marks=[];
 const result=resultReport(marks);
 console.log(result);

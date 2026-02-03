@@ -3,7 +3,7 @@ function  onlyCharacter( str)
      // You have to write your code here 
      if(typeof str === 'string')
      {
-        let string = str.replace(/\s/g, '');
+        let string = str.split(' ').join('');
         string = string.toUpperCase();
         return string;
      }

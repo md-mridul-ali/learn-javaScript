@@ -12,6 +12,6 @@ function totalFine( fare )
      }
 
 }
-const fare=0;
+const fare="Gorib tai ticket katinai" ;
 const result=totalFine(fare);
 console.log(result);

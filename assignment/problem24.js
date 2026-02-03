@@ -22,6 +22,6 @@ function  isSame(arr1 , arr2 )
      }
 }
 const arr1={data: [2 , 5 , 6] } ;
-const arr2=[2 , 5 , 6] ;
+const arr2= [2 , 5 , 6] ;
 const result=isSame(arr1,arr2);
 console.log(result);
